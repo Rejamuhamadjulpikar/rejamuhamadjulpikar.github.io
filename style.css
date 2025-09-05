@@ -1,6 +1,45 @@
+/* ---- CSS yang Diperlukan untuk Navbar Anda ---- */
+
+/* Mengubah warna latar belakang navbar */
+.navbar {
+    background-color: #333 !important; /* Menggunakan !important untuk menimpa Bootstrap */
+}
+
+/* Mengatur warna link di navbar */
+.navbar-light .navbar-nav .nav-link {
+    color: white; /* Mengatur warna link menjadi putih */
+}
+
+/* Mengatur warna toggle icon untuk mobile */
+.navbar-toggler-icon {
+    filter: invert(1); /* Mengubah warna icon menjadi putih agar terlihat di latar belakang gelap */
+}
+
+
+/* ---- Gaya Dropdown & Halaman Lainnya (sudah benar) ---- */
+
+.dropdown-menu {
+    background-color: white; 
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 0;
+}
+
+.dropdown-item {
+    color: black;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
+}
+
+.dropdown-item:hover {
+    background-color: black;
+    color: white;
+}
+
 body {
     text-align: center;
-    font-family: time new roman;
+    font-family: 'Times New Roman', Times, serif;
     margin: 0;
     padding: 0;
     background-color: #FFD700;
@@ -10,104 +49,6 @@ body {
     overflow-x: hidden;
 }
 
-.navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: #333;
-    color: white;
-    padding: 1rem;
-    z-index: 1000;
-}
-
-.navbar-links {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.nav-item {
-    margin-right: 20px;
-}
-
-.nav-link {
-    color: white;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.nav-link:hover {
-    color: #ffc107;
-}
-
-.navbar-toggler {
-    display: none;
-}
-
-@media (max-width: 768px) {
-    .navbar-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .navbar-toggler {
-        display: block;
-        cursor: pointer;
-    }
-
-    .navbar-toggler-icon {
-        width: 20px;
-        height: 20px;
-        background: transparent;
-        border: none;
-        outline: none;
-    }
-
-    .navbar-toggler-icon span {
-        display: block;
-        width: 25px;
-        height: 3px;
-        background-color: white;
-        margin-bottom: 5px;
-        transition: all 0.3s ease;
-    }
-
-    .navbar-toggler.open .navbar-toggler-icon span:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
-    }
-
-    .navbar-toggler.open .navbar-toggler-icon span:nth-child(2) {
-        opacity: 0;
-    }
-
-    .navbar-toggler.open .navbar-toggler-icon span:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
-    }
-}
-
-/* Gayakan dropdown */
-.dropdown-menu {
-    background-color: white; /* Warna latar belakang dropdown */
-    border: none; /* Hapus border */
-    border-radius: 5px; /* Tambahkan sudut yang lembut */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan */
-    padding: 0;
-}
-
-.dropdown-item {
-    color: black; /* Warna teks */
-    padding: 10px 20px; /* Spasi antara teks dan batas dropdown */
-    transition: background-color 0.3s; /* Efek transisi */
-}
-
-.dropdown-item:hover {
-    background-color: black; /* Warna latar belakang saat dihover */
-    color: white; /* Warna teks saat dihover */
-}
-
-
-/* Menambahkan animasi pada section */
 section {
     margin: 50px auto;
     background-color: #fff;
@@ -115,12 +56,11 @@ section {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 80%;
     padding: 20px;
-    transition: transform 0.3s ease; /* Menambahkan efek transisi untuk transformasi */
+    transition: transform 0.3s ease;
 }
 
-/* Menambahkan efek hover untuk section */
 section:hover {
-    transform: translateY(-10px); /* Bergerak ke atas saat dihover */
+    transform: translateY(-10px);
 }
 
 .profile {
@@ -129,8 +69,8 @@ section:hover {
     border-radius: 50%;
     margin-top: 50px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border: 4px solid white; /* Tambahkan border dengan ketebalan 4px dan warna hitam */
-    overflow: hidden; /* Hindari bayangan melewati batas border */
+    border: 4px solid white;
+    overflow: hidden;
 }
 
 .paragraph {
